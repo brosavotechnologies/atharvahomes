@@ -7,9 +7,9 @@ export const site = {
     "Atharva Homes is a construction and interior design practice based in New Delhi. We build and finish homes with a calm, material-led approach — considered proportions, honest surfaces and detailing that lasts.",
   /** Contact details are placeholders. Do not treat as real. */
   contact: {
-    address: "Placeholder address, New Delhi, India",
-    phone: "+91 00000 00000",
-    email: "hello@example.com",
+    address: "71, Sant Nagar, East of Kailash, New Delhi, India - 110065",
+    phone: "+91 97112 57574",
+    email: "vkjha2710@gmail.com",
     hours: "Mon – Sat, 10:00 – 19:00",
   },
   social: [
