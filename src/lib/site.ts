@@ -24,7 +24,7 @@ export const navLinks = [
   { label: "Services", to: "/services" },
   { label: "Projects", to: "/projects" },
   { label: "Team", to: "/team" },
-  { label: "Contact", to: "/contact" },
+  // { label: "Contact", to: "/contact" },
 ] as const;
 
 export const whyChooseUs = [
