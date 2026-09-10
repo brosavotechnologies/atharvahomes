@@ -58,22 +58,41 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            {site.social.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                className="text-xs uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {s.label}
-              </a>
-            ))}
-          </div>
-        </div>
+        <div className="mt-16 flex flex-col gap-5 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
+  {/* Copyright */}
+  <p className="text-xs text-muted-foreground">
+    &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
+  </p>
+
+  {/* Social + Made by */}
+  <div className="flex flex-wrap items-center gap-6">
+    {site.social.map((s) => (
+      <a
+        key={s.label}
+        href={s.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-xs uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+      >
+        {s.label}
+      </a>
+    ))}
+
+    <span className="h-3 w-px bg-border" />
+
+    <a
+      href="https://www.brosavo.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs text-muted-foreground transition-colors hover:text-foreground"
+    >
+      Made by{" "}
+      <span className="font-medium text-foreground">
+        BROSAVO
+      </span>
+    </a>
+  </div>
+</div>
       </div>
     </footer>
   );
