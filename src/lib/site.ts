@@ -1,7 +1,7 @@
 export const site = {
   name: "Atharva Homes",
   tagline: "Construction & Interior Design",
-  city: "New Delhi",
+  // city: "New Delhi",
   /** Placeholder — replace with the real one-line positioning statement. */
   intro:
     "Atharva Homes is a construction and interior design practice based in New Delhi. We build and finish homes with a calm, material-led approach — considered proportions, honest surfaces and detailing that lasts.",
