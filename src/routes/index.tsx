@@ -190,7 +190,7 @@ function Home() {
       </section>
 
       {/* Founder */}
-      <section className="bg-muted py-24 lg:py-32">
+      {/* <section className="bg-muted py-24 lg:py-32">
         <div className="mx-auto grid max-w-[1200px] items-center gap-12 px-6 lg:grid-cols-12 lg:px-10">
           <Reveal className="lg:col-span-5">
             <SiteImage
@@ -220,7 +220,7 @@ function Home() {
             </Link>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       {/* Team */}
       {/* <section className="mx-auto max-w-[1200px] px-6 py-24 lg:px-10 lg:py-32">
