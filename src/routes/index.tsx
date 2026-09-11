@@ -223,7 +223,7 @@ function Home() {
       </section>
 
       {/* Team */}
-      <section className="mx-auto max-w-[1200px] px-6 py-24 lg:px-10 lg:py-32">
+      {/* <section className="mx-auto max-w-[1200px] px-6 py-24 lg:px-10 lg:py-32">
         <Reveal className="max-w-2xl">
           <Eyebrow>Team</Eyebrow>
           <h2 className="mt-6 font-serif text-3xl leading-tight text-foreground sm:text-4xl">
@@ -270,7 +270,7 @@ function Home() {
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </Reveal>
-      </section>
+      </section> */}
 
       {/* Gallery */}
       <section className="bg-secondary py-24 lg:py-32">
