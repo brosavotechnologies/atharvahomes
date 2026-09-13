@@ -9,7 +9,7 @@ export const site = {
   contact: {
     address: "71, Sant Nagar, East of Kailash, New Delhi, India - 110065",
     phone: "+91 97112 57574",
-    email: "vkjha2710@gmail.com",
+    email: "atharvahomes27@gmail.com",
     hours: "Mon – Sat, 10:00 – 19:00",
   },
   social: [

@@ -141,10 +141,10 @@ function ContactPage() {
                 />
 
                 <a
-                  href="mailto:vkjha2710@gmail.com"
+                  href="mailto:atharvahomes27@gmail.com"
                   className="break-all text-sm transition-colors hover:text-muted-foreground"
                 >
-                  vkjha2710@gmail.com
+                  atharvahomes27@gmail.com
                 </a>
               </div>
             </div>
