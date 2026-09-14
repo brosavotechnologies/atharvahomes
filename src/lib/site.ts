@@ -13,7 +13,7 @@ export const site = {
     hours: "Mon – Sat, 10:00 – 19:00",
   },
   social: [
-    { label: "Instagram", href: "https://www.instagram.com/atharvahomes/" },
+    { label: "Instagram", href: "https://www.instagram.com/_atharvahomes/" },
     { label: "LinkedIn", href: "#" },
   ],
 } as const;
