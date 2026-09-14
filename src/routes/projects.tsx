@@ -166,16 +166,16 @@ function ProjectImage({
   orientation?: Orientation;
 }) {
   return (
-    <div className="group relative w-full overflow-hidden">
+    <div
+      className={`group relative w-full overflow-hidden ${
+        orientation === "vertical" ? "aspect-[3/4]" : "aspect-[3/2]"
+      }`}
+    >
       <img
         src={src}
         alt={alt}
         loading="lazy"
-        className={`block w-full transition-transform duration-700 ease-out group-hover:scale-[1.025] ${
-          orientation === "vertical"
-            ? "mx-auto max-h-[520px] w-auto max-w-full object-contain"
-            : "aspect-[16/10] object-cover"
-        }`}
+        className="block h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.025]"
       />
     </div>
   );
