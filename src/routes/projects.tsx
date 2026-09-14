@@ -92,14 +92,36 @@ const completedProjects: Project[] = [
     location: "New Delhi",
     year: "2026",
     image: "/images/completed-project-03.jpeg",
-    alt: "Completed residential project",
+    alt: "Completed residential hallway interior",
     description:
-      "A complete transformation from construction stage to a finished residential space.",
-    beforeImage: "/images/construction-started.jpg",
-    afterImage: "/images/completed-project-03.jpeg",
-    beforeOrientation: "horizontal",
-    afterOrientation: "horizontal",
+      "A completed residence combining thoughtful architecture with beautiful interior details.",
+    orientation: "horizontal",
   },
+  {
+    number: "05",
+    title: "Completed Project 05",
+    location: "New Delhi",
+    year: "2026",
+    image: "/images/completed-project-05.jpeg",
+    alt: "Completed residential hallway interior",
+    description:
+      "A completed residence combining thoughtful architecture with beautiful interior details.",
+    orientation: "vertical",
+  },
+  // {
+  //   number: "04",
+  //   title: "Completed Project 04",
+  //   location: "New Delhi",
+  //   year: "2026",
+  //   image: "/images/completed-project-03.jpeg",
+  //   alt: "Completed residential project",
+  //   description:
+  //     "A complete transformation from construction stage to a finished residential space.",
+  //   beforeImage: "/images/construction-started.jpg",
+  //   afterImage: "/images/completed-project-03.jpeg",
+  //   beforeOrientation: "vertical",
+  //   afterOrientation: "vertical",
+  // },
 ];
 
 // =====================================================
