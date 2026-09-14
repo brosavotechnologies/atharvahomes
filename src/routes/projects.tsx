@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
@@ -27,15 +27,6 @@ const ongoingProjects = [
     alt: "Ongoing residential construction project",
     description:
       "A residential project in progress, bringing modern architecture and quality craftsmanship together.",
-  },
-  {
-    number: "03",
-    title: "Ongoing Project 03",
-    location: "New Delhi",
-    year: "2026",
-    image: "/images/construction-started.jpg",
-    alt: "Ongoing residential construction project",
-    description: "A new residential space taking shape with careful attention to detail.",
   },
 ];
 
@@ -70,6 +61,18 @@ const completedProjects = [
     description:
       "A completed residence combining thoughtful architecture with beautiful interior details.",
   },
+  {
+    number: "04",
+    title: "Completed Project 04",
+    location: "New Delhi",
+    year: "2026",
+    image: "/images/completed-project-03.jpeg",
+    alt: "Completed residential project",
+    beforeImage: "/images/construction-started.jpg",
+    afterImage: "/images/completed-project-03.jpeg",
+    description:
+      "A residential project transformed from construction to a finished home through thoughtful design and careful execution.",
+  },
 ];
 
 // =====================================================
@@ -93,7 +96,8 @@ export const Route = createFileRoute("/projects")({
       },
       {
         property: "og:description",
-        content: "Explore ongoing and completed residential projects by Atharva Homes.",
+        content:
+          "Explore ongoing and completed residential projects by Atharva Homes.",
       },
     ],
   }),
@@ -102,10 +106,15 @@ export const Route = createFileRoute("/projects")({
 
 // =====================================================
 // RESPONSIVE IMAGE COMPONENT
-// DETECTS VERTICAL OR HORIZONTAL IMAGES
 // =====================================================
 
-function ProjectImage({ src, alt }: { src: string; alt: string }) {
+function ProjectImage({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) {
   return (
     <div className="relative mx-auto aspect-[3/4] w-[72%] overflow-hidden bg-muted sm:w-[68%] lg:w-[62%]">
       <img
@@ -113,6 +122,46 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
         alt={alt}
         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
       />
+    </div>
+  );
+}
+
+// =====================================================
+// BEFORE & AFTER IMAGE COMPONENT
+// =====================================================
+
+function BeforeAfterImages({
+  beforeImage,
+  afterImage,
+}: {
+  beforeImage: string;
+  afterImage: string;
+}) {
+  return (
+    <div className="grid grid-cols-2 gap-3">
+      <div className="relative overflow-hidden bg-muted">
+        <img
+          src={beforeImage}
+          alt="Before construction"
+          className="aspect-[3/4] h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+        />
+
+        <div className="absolute left-3 top-3 bg-background/90 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-foreground backdrop-blur-sm">
+          Before
+        </div>
+      </div>
+
+      <div className="relative overflow-hidden bg-muted">
+        <img
+          src={afterImage}
+          alt="After completion"
+          className="aspect-[3/4] h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+        />
+
+        <div className="absolute left-3 top-3 bg-background/90 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-foreground backdrop-blur-sm">
+          After
+        </div>
+      </div>
     </div>
   );
 }
@@ -129,7 +178,7 @@ function ProjectSection({
 }: {
   title: string;
   subtitle: string;
-  projects: typeof ongoingProjects;
+  projects: typeof ongoingProjects | typeof completedProjects;
   status: "Ongoing" | "Completed";
 }) {
   return (
@@ -178,14 +227,28 @@ function ProjectSection({
                 >
                   {/* Photo with automatic orientation detection */}
                   <div className="relative">
-                    <ProjectImage src={project.image} alt={project.alt} />
+                    {"beforeImage" in project &&
+                    project.beforeImage &&
+                    project.afterImage ? (
+                      <BeforeAfterImages
+                        beforeImage={project.beforeImage}
+                        afterImage={project.afterImage}
+                      />
+                    ) : (
+                      <ProjectImage
+                        src={project.image}
+                        alt={project.alt}
+                      />
+                    )}
 
                     {/* Status badge */}
                     <div className="absolute left-5 top-5">
                       <span className="inline-flex items-center gap-2 bg-background/90 px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-foreground backdrop-blur-sm">
                         <span
                           className={`h-1.5 w-1.5 rounded-full ${
-                            status === "Ongoing" ? "bg-amber-500" : "bg-emerald-600"
+                            status === "Ongoing"
+                              ? "bg-amber-500"
+                              : "bg-emerald-600"
                           }`}
                         />
                         {status}
@@ -194,16 +257,23 @@ function ProjectSection({
 
                     {/* Arrow */}
                     <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100">
-                      <ArrowUpRight className="h-4 w-4 text-black" strokeWidth={1.5} />
+                      <ArrowUpRight
+                        className="h-4 w-4 text-black"
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
 
                   {/* Project details */}
                   <div className="mt-6">
                     <div className="flex items-center justify-between gap-4">
-                      <h3 className="font-serif text-2xl tracking-tight">{project.title}</h3>
+                      <h3 className="font-serif text-2xl tracking-tight">
+                        {project.title}
+                      </h3>
 
-                      <span className="text-[10px] text-muted-foreground">{project.number}</span>
+                      <span className="text-[10px] text-muted-foreground">
+                        {project.number}
+                      </span>
                     </div>
 
                     <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
@@ -251,12 +321,14 @@ function ProjectsPage() {
 
             <h1 className="mt-7 font-serif text-5xl font-normal leading-[1.05] tracking-[-0.025em] sm:text-6xl lg:text-8xl">
               Spaces made to be
-              <span className="block text-muted-foreground">lived in.</span>
+              <span className="block text-muted-foreground">
+                lived in.
+              </span>
             </h1>
 
             <p className="mt-10 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-              A selection of residential spaces shaped through thoughtful design, honest materials
-              and careful execution.
+              A selection of residential spaces shaped through thoughtful
+              design, honest materials and careful execution.
             </p>
           </motion.div>
         </div>
@@ -282,15 +354,18 @@ function ProjectsPage() {
       <section className="bg-neutral-950 text-white">
         <div className="mx-auto max-w-[1320px] px-6 py-28 lg:px-10 lg:py-36">
           <div className="max-w-4xl">
-            <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">Our Work</p>
+            <p className="text-[10px] uppercase tracking-[0.24em] text-white/40">
+              Our Work
+            </p>
 
             <h2 className="mt-8 font-serif text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-              We are interested in the details that make a house feel like home.
+              We are interested in the details that make a house feel like
+              home.
             </h2>
 
             <p className="mt-8 max-w-2xl text-base leading-8 text-white/50">
-              Proportion, light, texture and material are considered together to create spaces that
-              feel natural rather than over-designed.
+              Proportion, light, texture and material are considered together
+              to create spaces that feel natural rather than over-designed.
             </p>
           </div>
         </div>
@@ -310,8 +385,8 @@ function ProjectsPage() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-muted-foreground">
-            Whether you are building from the ground up or transforming an existing home, we would
-            be glad to hear about your project.
+            Whether you are building from the ground up or transforming an
+            existing home, we would be glad to hear about your project.
           </p>
 
           <Link
