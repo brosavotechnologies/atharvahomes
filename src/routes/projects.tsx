@@ -62,7 +62,7 @@ const completedProjects: Project[] = [
     alt: "Completed luxury residential project",
     description:
       "A thoughtfully designed home brought to life through quality materials and careful execution.",
-    orientation: "horizontal",
+    orientation: "vertical",
   },
   {
     number: "02",
@@ -73,7 +73,7 @@ const completedProjects: Project[] = [
     alt: "Completed luxury bathroom interior",
     description:
       "A refined residential space shaped around comfort, proportion, and timeless design.",
-    orientation: "horizontal",
+    orientation: "vertical",
   },
   {
     number: "03",
