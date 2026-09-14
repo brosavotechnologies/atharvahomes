@@ -13,7 +13,7 @@ const ongoingProjects = [
     title: "Ongoing Project 01",
     location: "New Delhi",
     year: "2026",
-    image: "/images/construction-started.jpg",
+    image: "/images/ongoing-project-03.jpeg",
     alt: "Ongoing residential construction project",
     description:
       "A contemporary home currently taking shape through thoughtful design and careful execution.",
@@ -33,7 +33,7 @@ const ongoingProjects = [
     title: "Ongoing Project 03",
     location: "New Delhi",
     year: "2026",
-    image: "/images/ongoing-project-03.jpeg",
+    image: "/images/construction-started.jpg",
     alt: "Ongoing residential construction project",
     description: "A new residential space taking shape with careful attention to detail.",
   },
