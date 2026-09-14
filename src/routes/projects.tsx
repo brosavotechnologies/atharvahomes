@@ -83,7 +83,7 @@ const completedProjects: Project[] = [
     image: "/images/hallway-2.jpg",
     alt: "Completed residential hallway interior",
     description:
-      "A completed residence combining thoughtful architecture with beautiful interior details.",
+      "A thoughtfully finished hallway designed with balanced proportions, warm materials, and refined interior detailing.",
     orientation: "horizontal",
   },
   {
@@ -92,9 +92,9 @@ const completedProjects: Project[] = [
     location: "New Delhi",
     year: "2026",
     image: "/images/completed-project-03.jpeg",
-    alt: "Completed residential hallway interior",
+    alt: "Completed residential kitchen interior",
     description:
-      "A completed residence combining thoughtful architecture with beautiful interior details.",
+      "A modern kitchen completed with clean cabinetry, durable surfaces, and carefully integrated functional details.",
     orientation: "horizontal",
   },
   {
@@ -103,9 +103,9 @@ const completedProjects: Project[] = [
     location: "New Delhi",
     year: "2026",
     image: "/images/completed-project-05.jpeg",
-    alt: "Completed residential hallway interior",
+    alt: "Completed residential interior project",
     description:
-      "A completed residence combining thoughtful architecture with beautiful interior details.",
+      "A refined residential interior combining thoughtful planning, elegant finishes, and a comfortable everyday atmosphere.",
     orientation: "vertical",
   },
   // {
