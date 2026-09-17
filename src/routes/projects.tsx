@@ -50,6 +50,28 @@ const ongoingProjects: Project[] = [
       "A residential project in progress, bringing modern architecture and quality craftsmanship together.",
     orientation: "vertical",
   },
+  {
+    number: "03",
+    title: "Completed Project 03",
+    location: "New Delhi",
+    year: "2026",
+    image: "/images/bedroom-01.png",
+    alt: "Completed residential interior project",
+    description:
+      "A refined residential interior combining thoughtful planning, elegant finishes, and a comfortable everyday atmosphere.",
+    orientation: "vertical",
+  },
+  {
+    number: "04",
+    title: "Completed Project 04",
+    location: "New Delhi",
+    year: "2026",
+    image: "/images/drawing-dining-area.png",
+    alt: "Completed residential interior project",
+    description:
+      "A refined residential interior combining thoughtful planning, elegant finishes, and a comfortable everyday atmosphere.",
+    orientation: "horizontal",
+  },
 ];
 
 const completedProjects: Project[] = [
@@ -111,28 +133,6 @@ const completedProjects: Project[] = [
   {
     number: "06",
     title: "Completed Project 06",
-    location: "New Delhi",
-    year: "2026",
-    image: "/images/bedroom-01.png",
-    alt: "Completed residential interior project",
-    description:
-      "A refined residential interior combining thoughtful planning, elegant finishes, and a comfortable everyday atmosphere.",
-    orientation: "vertical",
-  },
-  {
-    number: "07",
-    title: "Completed Project 06",
-    location: "New Delhi",
-    year: "2026",
-    image: "/images/drawing-dining-area.png",
-    alt: "Completed residential interior project",
-    description:
-      "A refined residential interior combining thoughtful planning, elegant finishes, and a comfortable everyday atmosphere.",
-    orientation: "horizontal",
-  },
-  {
-    number: "08",
-    title: "Completed Project 07",
     location: "New Delhi",
     year: "2026",
     image: "/images/toilet.png",
