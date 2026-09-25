@@ -141,6 +141,17 @@ const completedProjects: Project[] = [
       "A refined residential interior combining thoughtful planning, elegant finishes, and a comfortable everyday atmosphere.",
     orientation: "vertical",
   },
+  {
+    number: "07",
+    title: "Completed Project 07",
+    location: "New Delhi",
+    year: "2026",
+    image: "/images/completed2509.jpeg",
+    alt: "Completed residential interior project",
+    description:
+      "A thoughtfully designed residential interior featuring refined finishes, warm ambient lighting, and a clean, sophisticated aesthetic for modern everyday living.",
+    orientation: "vertical",
+  },
   // {
   //   number: "04",
   //   title: "Completed Project 04",
