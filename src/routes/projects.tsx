@@ -52,7 +52,7 @@ const ongoingProjects: Project[] = [
   },
   {
     number: "03",
-    title: "Completed Project 03",
+    title: "Ongoing Project 03",
     location: "New Delhi",
     year: "2026",
     image: "/images/bedroom-01.png",
@@ -63,7 +63,7 @@ const ongoingProjects: Project[] = [
   },
   {
     number: "04",
-    title: "Completed Project 04",
+    title: "Ongoing Project 04",
     location: "New Delhi",
     year: "2026",
     image: "/images/drawing-dining-area.png",
